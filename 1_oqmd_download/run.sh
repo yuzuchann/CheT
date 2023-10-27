@@ -1,6 +1,6 @@
 #!/bin/bash
 while true; do
-    python 2.py
+    python oqmd_download.py
     if [ $? -ne 0 ]; then
         echo "Python script failed, waiting for 30 minutes before restart..."
         sleep 1800
