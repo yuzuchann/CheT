@@ -24,8 +24,7 @@ def get_all_material_data_from_oqmd():
         total_entries = data["meta"]["data_available"]
         pbar = tqdm(total=total_entries, initial=total_downloaded)
         while link is not None:
-            get_all_links_and_data(link, csv_name, pbar)
-            link = data["links"]["next"]
+            link = get_all_links_and_data(link, csv_name, pbar)  # 更新link的值
             time.sleep(1)  # 在每次请求之间添加一秒的延迟
         pbar.close()
     else:
@@ -44,6 +43,7 @@ def get_all_links_and_data(link, csv_name, pbar):
                 csv_writer.writerow([material_name, space_group])
                 pbar.update(1)
             f.close()
+        return data["links"]["next"]  # 返回下一个链接
     else:
         print("请求失败，状态码：", response.status_code)
 
