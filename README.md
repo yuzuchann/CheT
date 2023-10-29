@@ -4,4 +4,4 @@ Chemistry Transformer: Chemistry is the natural language of materials.
 ## download
 Download OQMD dataset by RESTfulAPI.  
 Material_Name and Space_Group of the dataset are needed.  
-Totally 1022603 samples.
+Totally 1022603 samples. And 706583 samples after cleaning.
