@@ -9,3 +9,4 @@ Totally 1022603 samples. And 1013412 samples after cleaning.
 ## pretrain
 CheT shares a similar network framework with BERT, so their hyperparameters have similar settings and effects, including but not limited to the number of encoder layers, embedding length, number of attention headers, batchsize, etc.  
 This step can be considered as multitask learning. The parameters of the encoder section will be used in the subsequent steps.  
+In order to choose the best hyperparameters of CheT, 'comparing.py' can be used. You can also use bayesian optimization or other optimization algorithms to work more efficiently.
